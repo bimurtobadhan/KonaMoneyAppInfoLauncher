@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         if (context == null ) {
             return false;
         }
-        if(isPackageInstalled(packageName, context.getPackageManager())){
+        if(!isPackageInstalled(packageName, context.getPackageManager())){
             return false;
         }
         final Intent i = new Intent();
